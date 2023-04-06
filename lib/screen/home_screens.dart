@@ -11,6 +11,18 @@ class HomeScreen extends StatelessWidget {
       title: 'Home Screen',
       children: [
         ElevatedButton(
+            onPressed: () {
+              // 앞에 화면이 없기에 검정화면으로 보임
+              Navigator.of(context).pop();
+            },
+            child: Text('Pop')),
+        ElevatedButton(
+            onPressed: () {
+              // 앞에 화면이 없기에 검정화면으로 보임
+              Navigator.of(context).maybePop();
+            },
+            child: Text('Maybe Pop')),
+        ElevatedButton(
           onPressed: () async {
             // 다른 화면에서 값 받아오기
             // async + await 비동기로 값 가져오기
